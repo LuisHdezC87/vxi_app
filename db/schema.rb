@@ -15,6 +15,23 @@ ActiveRecord::Schema.define(version: 0) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "contacts", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.integer "contact_number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "vxi_site_id"
+    t.integer "job_position_id"
+    t.integer "job_experience_id"
+    t.integer "education_level_id"
+    t.index ["education_level_id"], name: "index_contacts_on_education_level_id"
+    t.index ["job_experience_id"], name: "index_contacts_on_job_experience_id"
+    t.index ["job_position_id"], name: "index_contacts_on_job_position_id"
+    t.index ["vxi_site_id"], name: "index_contacts_on_vxi_site_id"
+  end
+
   create_table "education_levels", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false

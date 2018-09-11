@@ -1,0 +1,63 @@
+<div class='vxi-logo-container'>
+  <%= link_to image_tag("vxi-logo.png", :alt => 'logo'), {action: 'new', controller: 'contacts'}%>
+</div>
+
+<div class='sign-up-facebook' >
+  
+</div>
+
+<div class='form-container'>
+  <%= form_for(@contact, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+    <div class="form-group">
+      <div class="col-md-2">
+        <%= f.label :first_name, 'First Name*' %>
+        <%= f.text_field :first_name, class: 'form-control' %>
+      </div>
+      <div class="col-md-2">
+        <%= f.label :last_name, 'Last Name*' %>
+        <%= f.text_field :last_name, class: 'form-control' %>
+      </div>
+    </div>
+     
+     <div class="form-group">
+      <div class="col-md-2">
+        <%= f.label :contact_number, 'Contact Number*' %>
+        <%= f.text_field :contact_number, class: 'form-control' %>
+      </div>
+      <div class="col-md-2">
+        <%= f.label :email, 'Email Address*' %>
+        <%= f.text_field :email, class: 'form-control' %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-4">
+        <%= f.label :vxi_site, 'Which VXI site do you want to apply for?*'%>
+        <%= f.collection_select :vxi_site, @sites, :id, :site_name, include_blank: true, class: 'dropdown-container' %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-2">
+        <%= f.label :position, 'Which position are you applying for?*' %>
+        <%= f.collection_select :position, @positions, :id, :position_name, include_blank: true %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-2">
+        <%= f.label :education_level, 'What is your highest educational attainment?*' %>
+        <%= f.collection_select :education_level, @edu_levels, :id, :name, include_blank: true %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-2">
+        <%= f.label :job_experience, 'Do you have call center experience?*' %>
+        <%= f.collection_select :job_experience, @experience, :id, :experience, include_blank: true %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class=" col-md-2">
+        <%= f.submit 'Submit', class: 'submit-btn' %>
+      </div>
+    </div>
+  <% end %>
+</div>
