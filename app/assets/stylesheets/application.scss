@@ -1,1 +1,45 @@
 @import "bootstrap";
+
+.vxi-logo-container{
+  left: 200px;
+  width: 265px;
+  height: 265px;
+  position: absolute;
+}
+
+.vxi-logo-container img {
+    width: 100%;
+    height: auto;
+}
+
+.form-container{
+  padding-top: 17%;
+  padding-left: 14%;
+}
+
+.submit-btn{
+  background: #fcee18;
+  color: #d41c65;
+  width: 145px;
+  height: 45px;
+  font-size: 20px;
+  padding: 10px 30px;
+  display: inline-block;
+  font-weight: 700;
+  border: none;
+}
+
+.dropdown-container select{
+display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
