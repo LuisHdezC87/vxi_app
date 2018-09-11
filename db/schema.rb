@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2018_09_11_204033) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,10 +22,10 @@ ActiveRecord::Schema.define(version: 0) do
     t.integer "contact_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "vxi_site_id"
-    t.integer "job_position_id"
-    t.integer "job_experience_id"
-    t.integer "education_level_id"
+    t.bigint "vxi_site_id"
+    t.bigint "job_position_id"
+    t.bigint "job_experience_id"
+    t.bigint "education_level_id"
     t.index ["education_level_id"], name: "index_contacts_on_education_level_id"
     t.index ["job_experience_id"], name: "index_contacts_on_job_experience_id"
     t.index ["job_position_id"], name: "index_contacts_on_job_position_id"
@@ -73,4 +73,8 @@ ActiveRecord::Schema.define(version: 0) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "contacts", "education_levels"
+  add_foreign_key "contacts", "job_experiences"
+  add_foreign_key "contacts", "job_positions"
+  add_foreign_key "contacts", "vxi_sites"
 end
