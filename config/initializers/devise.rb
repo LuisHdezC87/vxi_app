@@ -288,6 +288,6 @@ Devise.setup do |config|
   #   include Turbolinks::Controller
   # end
 
-  config.omniauth :facebook, "App ID", "App Secret", callback_url: "http://localhost:3000/users/auth/facebook/callback"
+  config.omniauth :facebook, "259227558052979", "c7aa9efe209a33e8505e25d71d8b24d4", callback_url: "http://localhost:3000/users/auth/facebook/callback"
   
 end
