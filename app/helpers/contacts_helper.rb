@@ -5,12 +5,4 @@ module ContactsHelper
     Dir.glob( url + '*.*').map{|img| img.split('/background/').last.split('.').first}
   end
 
-  def get_email_contact_vxi
-    CREDENTIALS['email'] rescue ''
-  end
-
-  def get_phone_vxi
-     CREDENTIALS['phone'] rescue ''
-  end
-
 end

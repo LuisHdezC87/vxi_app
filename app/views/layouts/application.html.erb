@@ -12,6 +12,32 @@
   </head>
 
   <body>
+    <div class="menu">
+      <%= link_to "Home", {action: 'new', controller: 'contacts'} %>
+      <div class="menu-space"></div>
+      <%= link_to "Blog", {action: 'index', controller: 'blogs'} %>
+    </div>
+
     <%= yield %>
+      <div class="vxi-contact-info-wraper">
+        <%= react_component 'VxiLogo' %>
+        <div class="vxi-contact-info-visit">
+          <h3>Visit our Recruitment Centers</h3>
+          <ul>
+            <li><p><span>Makati</span>G/F SM Cyber Two, EDSA Buendia, Makati City</p></li>
+            <li><p><span>North Edsa</span>G/F Panorama TechnoCenter, 1029 EDSA, Quezon City</p></li>
+            <li><p><span>MOA Complex</span>G/F Five Ecom Center, Pacific Drive, MOA Complex, Pasay City</p></li>
+            <li><p><span>Robinsons Lanang</span>2/F Robinsons Cybergate, Lanang, Davao City</p></li>
+            <li><p><span>SM Ecoland</span>2/F Annex SM City Davao, Ecoland, Davao City</p></li>
+            <li><p><span>Felcris Centrale</span>G/F Felcris Centrale Mall, Quimpo Boulevard, Talomo, Davao City</p></li>
+            <li><p><span>SM City Clark</span>G/F SM City Clark Tech Hub Bldg. 6, M.A. Roxas Highway, Malabanias Angeles City</p></li>
+          </ul>
+        </div>
+        <% 
+          email = get_email_contact_vxi
+          phone = get_phone_vxi
+        %>
+        <%= react_component 'VxiSocialInfo', {email: email, phone: phone} %>
+      </div>
   </body>
 </html>

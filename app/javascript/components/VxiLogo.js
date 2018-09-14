@@ -5,7 +5,7 @@ import LogoImage from "images/logo.png"
 class VxiLogo extends React.Component {
 
   onClickLogo = () => {
-    location.reload(true);
+    window.location.href = "/";
     scroll(0,0);
   }
 
