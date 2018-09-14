@@ -1,63 +1,101 @@
-<div class='vxi-logo-container'>
-  <%= link_to image_tag("vxi-logo.png", :alt => 'logo'), {action: 'new', controller: 'contacts'}%>
+<% imgsPath = get_imgs_helper %>
+<%= react_component 'FormImgContainer', {imgs: imgsPath, 
+      contact: @contact, sites: @sites, edu_levels: @edu_levels, 
+        job_experience: @experience, postitions: @positions  } %>
+
+<div class="passion-people-wraper">
+  <div class="passion-people-table">
+    <div class="passion-people-table-left">
+      <%= image_tag('intro-title.png', alt: 'passion for people') %>
+    </div>
+    <div class="passion-people-table-right">
+      <p>
+        Our story started in Los Angeles in 1997 as an Integrated Customer Contact Center that specializes in Multilingual Solutions. Our founders believed that a unique blend of Technology and Customer Service will ultimately achieve Excellent Consumer Management.
+      </p>
+      <p>
+       VXI Philippines was established in 2003 and since then, our road to success continues to soar. In fact, we are now 12,000 employees strong across Metro Manila and Davao. But we do not stop there. We are continuously looking for new talents that will join our journey, and together, we build a great culture, create success stories and take amazing care of our people.
+      </p>
+      <%= react_component 'GetInTouch' %>
+    </div>
+  </div>
+  <div class="air-plane-wraper">
+    <%= image_tag('airplane2.png', alt: 'airplane') %>
+  </div>
+  <div class="air-plane-wraper-left">
+    <%= image_tag('airplane1.png', alt: 'airplane') %>
+  </div>
 </div>
 
-<div class='sign-up-facebook' >
-  <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
-</div>
+<div class="cust-sales-tech-wraper">
+  <div class="cust-sales-tech-wraper-info">
+    <div class="cust-sales-tech-wraper-title">
+      <div class="cust-sales-tech-wraper-info-title">
+        Customer Service Associates 
+      </div>
+      <div class="cust-sales-tech-wraper-title-img">
+        <%= image_tag('smiley.png', alt: 'smiley-icon') %>
+      </div>
+    </div>
+    <p>
+      Committed to client satisfaction, VXI is on the lookout for Customer Service Associates who are passionate about providing excellent service to customers. Work with us and be inspired to be your best every day!
+    </p>
+    <div class="cust-sales-tech-wraper-title">
+      <div class="cust-sales-tech-wraper-info-title">
+        Sales Associates 
+      </div>
+      <div class="cust-sales-tech-wraper-title-img-dollar">
+        <%= image_tag('dollar.png', alt: 'dollar-icon') %>
+      </div>
+    </div>
+    <p>
+      Being a Sales Associate is all about having the right Customer Service skills, Communication skills and Persistence! VXI is looking for individuals with confidence, enthusiasm and above all, passion to make a sale and seal the deal.
+    </p>
 
-<div class='form-container'>
-  <%= form_for(@contact, :html => {class: "form-horizontal", role: "form"}) do |f| %>
-    <div class="form-group">
-      <div class="col-md-2">
-        <%= f.label :first_name, 'First Name*' %>
-        <%= f.text_field :first_name, class: 'form-control' %>
-      </div>
-      <div class="col-md-2">
-        <%= f.label :last_name, 'Last Name*' %>
-        <%= f.text_field :last_name, class: 'form-control' %>
-      </div>
-    </div>
-     
-     <div class="form-group">
-      <div class="col-md-2">
-        <%= f.label :contact_number, 'Contact Number*' %>
-        <%= f.text_field :contact_number, class: 'form-control' %>
-      </div>
-      <div class="col-md-2">
-        <%= f.label :email, 'Email Address*' %>
-        <%= f.text_field :email, class: 'form-control' %>
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-md-4">
-        <%= f.label :vxi_site, 'Which VXI site do you want to apply for?*'%>
-        <%= f.collection_select :vxi_site, @sites, :id, :site_name, include_blank: true, class: 'dropdown-container' %>
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-md-2">
-        <%= f.label :position, 'Which position are you applying for?*' %>
-        <%= f.collection_select :position, @positions, :id, :position_name, include_blank: true %>
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-md-2">
-        <%= f.label :education_level, 'What is your highest educational attainment?*' %>
-        <%= f.collection_select :education_level, @edu_levels, :id, :name, include_blank: true %>
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-md-2">
-        <%= f.label :job_experience, 'Do you have call center experience?*' %>
-        <%= f.collection_select :job_experience, @experience, :id, :experience, include_blank: true %>
-      </div>
-    </div>
 
-    <div class="form-group">
-      <div class=" col-md-2">
-        <%= f.submit 'Submit', class: 'submit-btn' %>
+    <div class="cust-sales-tech-wraper-title">
+      <div class="cust-sales-tech-wraper-info-title">
+       Technical Support Associates
+      </div>
+      <div class="cust-sales-tech-wraper-title-img-gears">
+        <%= image_tag('gears.png', alt: 'gears-icon') %>
       </div>
     </div>
-  <% end %>
+    <p>
+      An expert in troubleshooting, Tech Support Associates are always ready to solve every technical difficulty our clients will encounter. VXI is in search of dedicated, committed and passionate techy individuals that will contribute to the success of the whole team. Join us and experience a family in your workplace.
+    </p>
+  </div>
+</div>  
+<div class="vxi-contact-info-wraper">
+  <%= react_component 'VxiLogo' %>
+  <div class="vxi-contact-info-visit">
+    <h3>Visit our Recruitment Centers</h3>
+    <ul>
+      <li>
+        <p><span>Makati</span>G/F SM Cyber Two, EDSA Buendia, Makati City</p>
+      </li>
+       <li>
+        <p><span>North Edsa</span>G/F Panorama TechnoCenter, 1029 EDSA, Quezon City</p>
+      </li>
+       <li>
+        <p><span>MOA Complex</span>G/F Five Ecom Center, Pacific Drive, MOA Complex, Pasay City</p>
+      </li>
+       <li>
+        <p><span>Robinsons Lanang</span>2/F Robinsons Cybergate, Lanang, Davao City</p>
+      </li>
+       <li>
+        <p><span>SM Ecoland</span>2/F Annex SM City Davao, Ecoland, Davao City</p>
+      </li>
+       <li>
+        <p><span>Felcris Centrale</span>G/F Felcris Centrale Mall, Quimpo Boulevard, Talomo, Davao City</p>
+      </li>
+       <li>
+        <p><span>SM City Clark</span>G/F SM City Clark Tech Hub Bldg. 6, M.A. Roxas Highway, Malabanias Angeles City</p>
+      </li>
+    </ul>
+  </div>
+  <% 
+    email = get_email_contact_vxi
+    phone = get_phone_vxi
+  %>
+  <%= react_component 'VxiSocialInfo', {email: email, phone: phone} %>
 </div>

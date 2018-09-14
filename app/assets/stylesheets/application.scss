@@ -1,10 +1,47 @@
 @import "bootstrap";
 
+.rex-1353x699 {
+  width: 100%;
+  height: 780px;
+  background-image: url('background/rex-1353x699.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.raffy-1 {
+ width: 100%;
+  height: 780px;
+  background-image: url('background/raffy-1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sundae-1353x699 {
+  width: 100%;
+  height: 780px;
+  background-image: url('background/sundae-1353x699.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.velvet-1353x699 {
+  width: 100%;
+  height: 780px;
+  background-image: url('background/velvet-1353x699.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
 .vxi-logo-container{
   left: 200px;
   width: 265px;
-  height: 265px;
+  height: 200px;
   position: absolute;
+}
+
+.vxi-logo-container:hover {
+  cursor: pointer;
 }
 
 .vxi-logo-container img {
@@ -12,17 +49,33 @@
     height: auto;
 }
 
-.form-container{
+.vxi-form-container{
   padding-top: 17%;
-  padding-left: 14%;
+  margin-left: 14%;
+  width: 32%;
+}
+
+.two-column-form-container {
+  display: inline-flex;
+  width: 100%;
+}
+
+.single-column {
+  width: 48%;
+  padding-bottom: 8px;
+  margin-right: 10px;
+}
+
+.label-form-container {
+  font-size: .9em;
 }
 
 .submit-btn{
   background: #fcee18;
   color: #d41c65;
-  width: 145px;
+  width: 140px;
   height: 45px;
-  font-size: 20px;
+  font-size: 1.4em;
   padding: 10px 30px;
   display: inline-block;
   font-weight: 700;
@@ -30,7 +83,7 @@
 }
 
 .dropdown-container select{
-display: block;
+  display: block;
   width: 100%;
   height: 34px;
   padding: 6px 12px;
@@ -43,3 +96,287 @@ display: block;
   border-radius: 4px;
 }
 
+.cust-sales-tech-wraper {
+  width: 100%;
+  height: 780px;
+  background-image: url('info-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cust-sales-tech-wraper-info {
+  margin-left: 13%;
+  padding-top: 4%;
+  width: 42%;
+  color: #fff;
+}
+
+.cust-sales-tech-wraper-info p{
+  line-height: 1.4;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.cust-sales-tech-wraper-title {
+  display: inline-flex;
+  margin-top: 10px;
+  margin-bottom: 18px;
+}
+
+.cust-sales-tech-wraper-info-title {
+  font-size: 2.1em;
+  color: #f5e600;
+  -webkit-transform:scale(0.7, 1.6);
+  -moz-transform:scale(0.7, 1.6);
+  -ms-transform:scale(0.7, 1.6);
+  -o-transform:scale(0.7, 1.6);
+  transform:scale(0.7, 1.6);
+  font-family: Lemon;
+  margin-left: -14%;
+}
+
+.cust-sales-tech-wraper-title-img {
+  margin-left: -10%;
+  width: 45px;
+  height: 45px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cust-sales-tech-wraper-title-img-dollar {
+  margin-left: -10%;
+  width: 40px;
+  height: 40px;
+}
+
+.cust-sales-tech-wraper-title-img-gears {
+  margin-left: -10%;
+  width: 60px;
+  height: 40px;
+}
+
+
+.cust-sales-tech-wraper-title-img img {
+    width: 100%;
+    height: auto;
+}
+
+.cust-sales-tech-wraper-title-img-dollar img {
+    width: 100%;
+    height: auto;
+}
+
+.cust-sales-tech-wraper-title-img-gears img {
+    width: 100%;
+    height: auto;
+}
+
+.passion-people-wraper {
+  width: 100%;
+  height: 780px;
+  background-color: #ff5505;
+  display: inline-flex;
+  padding-top: 15px;
+}
+
+.air-plane-wraper {
+  float: right;
+  width: 200px;
+  margin-left: -10%;
+}
+
+.passion-people-table {
+  width: 70%;
+  float: left;
+  margin-top: 10%;
+  margin-left: 14%;
+  padding-left: 15px;
+  display: inline-flex;
+}
+
+.passion-people-table-left {
+  width: 49%;
+}
+
+.passion-people-table-right {
+  width: 51%;
+  color: #fff;
+  padding-left: 12px;
+}
+
+.passion-people-table-right p {
+  line-height: 1.4;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.passion-for-people-get-in-touch {
+  margin-top: 5px;
+  background-color: #fcee18;
+  color: #ff5a00;
+  width: 320px;
+  height: 45px;
+  font-size: 1.3em;
+  padding: 10px 30px;
+  display: inline-block;
+  font-weight: 400;
+  border: none;
+}
+
+.passion-for-people-get-in-touch:hover {
+  cursor: pointer;
+}
+
+.air-plane-wraper-left {
+  position: absolute;
+  margin-top: 5.65in;
+}
+
+.vxi-contact-info-wraper {
+  width: 100%;
+  height: 235px;
+  background-color: white;
+  display: inline-flex;
+  padding-left: 78px;
+}
+
+.vxi-contact-info-logo {
+  padding: 21px;
+  margin-top: 15%;
+  margin-left: 21%;
+}
+
+.vxi-contact-info-logo:hover {
+  cursor: pointer;
+}
+
+.vxi-contact-info-logo img{
+  width: 70%;
+  height: auto;
+}
+
+.vxi-contact-info-visit {
+  width: 45%;
+  padding: 0 15px;
+  margin-top: 2.4%;
+}
+
+.vxi-contact-info-visit h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  padding-left: 37px;
+}
+
+.vxi-contact-info-visit ul {
+  list-style: none;
+  margin-bottom: 0px;
+}
+
+.vxi-contact-info-visit ul li {
+  font-weight: 500;
+  color: #353535;
+  font-size: 12px;
+  margin-bottom: 2px;
+  margin-bottom: 0px;
+}
+
+.vxi-contact-info-visit li p {
+  padding-left: 125px;
+  position: relative;
+  margin-bottom: 0px;
+}
+
+.vxi-contact-info-visit li p span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-right: 8px;
+}
+
+
+.vxi-contact-info-social {
+  height: auto;
+  margin-top: 15%;
+  margin-left: 66px;
+}
+
+.vxi-contact-info-social-email {
+  display: inline-flex;
+  width: 100%;
+}
+
+.vxi-contact-info-social-email:hover {
+  cursor: pointer;
+}
+
+.vxi-contact-info-social-email img {
+  width: 6.5%;
+  height: 26px;
+  margin-right: 4px;
+}
+
+.vxi-contact-info-social-phone {
+  display: inline-flex;
+  width: 100%;
+}
+
+.vxi-contact-info-social-phone:hover {
+  cursor: pointer;
+}
+
+.vxi-contact-info-social-phone img {
+  width: 6.5%;
+  height: 26px;
+  margin-right: 4px;
+}
+
+.vxi-contact-info-social-networks {
+  display: inline-flex;
+  width: 100%;
+}
+
+.vxi-contact-info-social-networks-facebook  {
+  width: 6.5%;
+  height: 26px;
+  margin-right: 4px;
+}
+
+.vxi-contact-info-social-networks-facebook:hover {
+  cursor: pointer;
+}
+
+.vxi-contact-info-social-networks-facebook  img {
+  width: 90%;
+  height: 26px;
+}
+
+.vxi-contact-info-social-networks-instagram  {
+  width: 6.5%;
+  height: 26px;
+  margin-right: 4px;
+}
+
+.vxi-contact-info-social-networks-instagram:hover {
+  cursor: pointer;
+}
+
+.vxi-contact-info-social-networks-instagram img  {
+  width: 90%;
+  height: 26px;
+}
+
+.vxi-contact-info-social-networks-twitter  {
+  width: 6.5%;
+  height: 26px;
+  margin-right: 4px;
+}
+
+.vxi-contact-info-social-networks-twitter:hover {
+  cursor: pointer;
+}
+
+.vxi-contact-info-social-networks-twitter img {
+  width: 90%;
+  height: 26px;
+}
