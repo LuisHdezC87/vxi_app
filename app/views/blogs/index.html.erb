@@ -1,0 +1,44 @@
+<div class="blog-wraper">
+  <div class='vxi-logo-container'>
+    <%= link_to image_tag("vxi-logo.png", :alt => 'logo'), {action: 'new', controller: 'contacts'}%>
+  </div>
+  <div class="blog-container">
+    <div class="blog-title" >
+      BLOG
+    </div>
+
+    <div class="blog-people">
+      <div class="blog-people-image">
+        <%= link_to image_tag('blog/People-of-VXI-Peter-Paul-Pajarillaga-for-Social-Media_FINAL-480x360.png', alt: 'people'), 
+          {action: 'show_people', controller: 'blogs'}
+        %>
+      </div>
+      <div class="blog-people-text">
+        <div class="blog-people-text-title">
+          <%= link_to 'PEOPLE OF VXI: FOR PAUL, SUCCESS IS EQUAL PARTS PASSION AND PERSEVERANCE', 
+              {action: 'show_people', controller: 'blogs'} %>
+        </div>
+        <div class="blog-people-text-title-date">
+          October 3, 2017 By: <spam>webadmin</spam>
+        </div>
+        <p>
+          The Latin audentes Fortuna adiuvat translates in English as "Fortune comes to the aid of those daring". This is meant to inspire people bent on pe... <spam><%= link_to 'Read more', {action: 'show_people', controller: 'blogs'} %></spam>
+        </p>
+      </div>
+    </div>
+    <div class="blog-vxi-gk">
+      <div class="blog-people-text-title">
+        <%= link_to 'VXI-GK YOLANDA DONATION TURNOVER CEREMONY IN SAMAR', 
+                {action: 'show_vxi_gk', controller: 'blogs'} %>
+      </div>
+      <div class="blog-people-text-title-date">
+        October 17, 2015 By: <spam>webadmin</spam>
+      </div>
+      <p>
+        Our #ChooseToBeHappy campaign upholds our commitment to bring happiness to the lives of people, to care for their well-being, to happily serve our c..<spam><%= link_to 'Read more', {action: 'show_vxi_gk', controller: 'blogs'} %></spam>
+      </p>
+    </div>
+
+
+  </div>
+</div>
