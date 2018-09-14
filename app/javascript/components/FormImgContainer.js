@@ -39,10 +39,6 @@ class FormImgContainer extends React.Component {
     alert('logo clicked');
   }
 
-  facebookLogin = () => {
-    alert('facebookLogin clicked');
-  }
-
   render () {
     this.props;
     return (
@@ -50,19 +46,12 @@ class FormImgContainer extends React.Component {
         <div className='vxi-logo-container' onClick={ this.onClickLogo } >
           <img src={ LogoImage } />
         </div>
-        <div className="facebook-btn">
-          <input
-            type='button'
-            value="test"
-            onClick={ this.facebookLogin }
-          />
-        </div>
         <VxiForm 
           contact={ this.props.contact } 
           sites={ this.props.sites }
           edu_levels={ this.props.edu_levels } 
-          job_experience={ this.props.experience }
-          postitions={ this.props.positions }
+          job_experience={ this.props.job_experience }
+          positions={ this.props.positions }e
         />
       </div>
     );

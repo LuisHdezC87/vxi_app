@@ -10,11 +10,11 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(allowed_params)
-    #response = RestClient.post(api_url, body(@contact), headers)
-    #success_response = JSON.parse(response.body)['pin'].length > 0 rescue false 
-    #if response.code == 200 && success_response
+    response = RestClient.post(api_url, body(@contact), headers)
+    success_response = JSON.parse(response.body)['pin'].length > 0 rescue false 
+    if response.code == 200 && success_response
       redirect_to root_path
-    #end
+    end
   end
 
   private

@@ -53,6 +53,17 @@
   padding-top: 17%;
   margin-left: 14%;
   width: 32%;
+  color: white;
+}
+
+.combobox-form {
+  margin: 3px 0 3px 0;
+  width: 100%;
+}
+
+.combobox-form-label {
+  margin: 3px 0 3px 0;
+  width: 100%;
 }
 
 .two-column-form-container {
@@ -665,6 +676,7 @@
 .first-error-show{
   font-size: 13px;
   font-weight: 400;
+  color: black;
 }
 
 .last-error-hidden {
@@ -675,6 +687,7 @@
 .last-error-show{
   font-size: 13px;
   font-weight: 400;
+  color: black;
 }
 .email-error-hidden {
   font-size: 1px;
@@ -684,6 +697,7 @@
 .email-error-show{
   font-size: 13px;
   font-weight: 400;
+  color: black;
 }
 .contact-error-hidden {
   font-size: 1px;
@@ -693,4 +707,31 @@
 .contact-error-show{
   font-size: 13px;
   font-weight: 400;
+  color: black;
 }
+
+.facebook-btn {
+  background: #143884;
+  color: white;
+  width: 300px;
+  margin: 0 0 45px 55px;
+  padding: 10px;
+  padding-left: 70px;
+  font-weight: 400;
+}
+
+.facebook-btn:hover {
+  background: #3b5898;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.fill-up-form {
+  width: 300px;
+  margin-left: 55px;
+  color: white;
+  font-size: 11px;
+  border-bottom: solid 1px white;
+  padding-left: 100px;
+}
+

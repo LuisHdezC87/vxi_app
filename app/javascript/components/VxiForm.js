@@ -1,5 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
+import Combobox from "./Combobox"
+
 class VxiForm extends React.Component {
 
   state = {
@@ -47,7 +49,7 @@ class VxiForm extends React.Component {
     return ok;
   }
 
-  onSubmit = () => {
+  onSubmitForm = () => {
     if ( this.isDataOk() ) {
       const token = document.getElementsByName('csrf-token')[0].content;
       $.ajax({
@@ -63,6 +65,7 @@ class VxiForm extends React.Component {
           this.clearData();
         } 
       });
+      alert('data has been sent');
     }
   }
 
@@ -73,7 +76,7 @@ class VxiForm extends React.Component {
       email: '',
       contact_number: null
     }
-    this.setState({ fields: fields});
+    this.setState({ fields: fields });
   }
 
   getContactInfo = () => {
@@ -87,6 +90,10 @@ class VxiForm extends React.Component {
     });
   }
 
+  facebookLogin = () => {
+    alert('gem devise and onmiauth installed propertly, only missing javascript call to the onmiauth helper method');
+  }
+
   render () {
     const firstName = this.state.errors.first_name.length == 0 ? 'first-error-hidden' : 'first-error-show';
     const lastName = this.state.errors.last_name.length == 0 ? 'last-error-hidden' : 'last-error-show';
@@ -95,6 +102,12 @@ class VxiForm extends React.Component {
 
     return (
       <div className="vxi-form-container">
+        <div className="facebook-btn" onClick={ this.facebookLogin }>
+          Sign Up with Facebook
+        </div>
+        <div className="fill-up-form">
+          Or fill up this form
+        </div>
         <div className="two-column-form-container">
           <div className="single-column">
             <div className="label-form-container">
@@ -155,7 +168,35 @@ class VxiForm extends React.Component {
             </div>
           </div>
         </div>
-        <div className="submit-btn" onClick={ this.onSubmit }>
+        <div className="two-column-form-container">
+          <Combobox 
+            options={ this.props.sites }
+            label="Which VXI site do you want to apply for?*"
+            value="site_name"
+          />
+        </div>
+        <div className="two-column-form-container">
+          <Combobox 
+            options={ this.props.positions }
+            label="Which position are you applying for?*"
+            value="position_name"
+          />
+        </div>
+        <div className="two-column-form-container">
+          <Combobox 
+            options={ this.props.edu_levels }
+            label="What is your highest educational attainment?*"
+            value="name"
+          />
+        </div>
+        <div className="two-column-form-container">
+          <Combobox 
+            options={ this.props.job_experience }
+            label="Do you have call center experience?*"
+            value="position"
+          />
+        </div>
+        <div className="submit-btn" onClick={ this.onSubmitForm }>
           Submit
         </div>
       </div>
