@@ -1,0 +1,16 @@
+<div class='vxi-logo-container'>
+  <%= link_to image_tag("vxi-logo.png", :alt => 'logo'), {action: 'new', controller: 'contacts'}%>
+</div>
+
+<div class="error-catch">
+  <h1>Oops! Sorry, page not found.</h1>
+  <p>
+    We're not playing hide-and-seek. But the page you're looking for doesn't exist. 
+  </p>
+  <p>
+    Try the links below instead.
+  </p>
+   <div class="error-catch-btn">
+     <%= link_to 'Go to Homepage', {action: 'new', controller: 'contacts'} %>
+   </div>
+</div>
